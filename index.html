@@ -1327,9 +1327,8 @@ window.DINER_DATA = {"menu":[{"id":"dish_loofah_egg_noodles","name":"丝瓜鸡�
     if (!actionEl) return;
     var action = actionEl.getAttribute('data-action');
 
-    if (event.target.closest('[data-sheet]') && action === 'close-modal' && event.target === actionEl) return;
     if (action === 'close-modal') {
-      if (event.target.closest('[data-sheet]')) return;
+      if (actionEl.classList.contains('overlay') && event.target !== actionEl) return;
       state.modal = null; render(); return;
     }
     if (action === 'nav') { navigate(actionEl.getAttribute('data-view')); return; }
