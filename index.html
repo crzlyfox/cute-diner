@@ -445,6 +445,18 @@ a { color: inherit; }
   .bottom-nav { padding-inline: 16px; }
 }
 
+/* iPhone Safari 聚焦输入框时不要自动放大页面 */
+@media (max-width: 600px) {
+  .search input,
+  .field,
+  .editor-textarea,
+  .editor-select,
+  .note-input,
+  .form-row input {
+    font-size: 16px;
+  }
+}
+
 </style>
 </head>
 <body>
