@@ -1782,13 +1782,6 @@ window.DINER_DATA = {"menu":[{"id":"dish_loofah_egg_noodles","name":"丝瓜鸡�
           var step = Math.min(dist, dt * 0.055);
           x += (dx / dist) * step;
           y += (dy / dist) * step;
-          if (Math.abs(dx) > 1) {
-            var nextFlip = dx < 0 ? -1 : 1;
-            if (nextFlip !== flip) {
-              flip = nextFlip;
-              pet.style.transform = 'scaleX(' + flip + ')';
-            }
-          }
           place();
         }
       }
